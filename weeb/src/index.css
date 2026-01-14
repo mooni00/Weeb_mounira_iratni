@@ -328,12 +328,12 @@ a {
 }
 
 .social-icon:hover {
-  opacity: 0.7; /* Petit effet au survol pour le critère 'Animations' */
+  opacity: 0.7; 
 }
 
 .social-links {
   display: flex;
-  gap: 20px; /* Espace entre les icônes */
+  gap: 20px; 
   align-items: center;
 }
 
@@ -342,4 +342,61 @@ a {
   font-size: 1.5rem;
   color: #000;
   margin: 0; 
+}
+
+/* contact form styles */
+.contact-container {
+  max-width: 800px; /* Taille exacte de la maquette */
+  margin: 80px auto;
+  text-align: center;
+}
+
+.intro-paragraph {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+.contact-form-styled {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #8B5CF6; /* Bordure violette comme sur l'image */
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes */
+  gap: 30px;
+}
+
+.full-width {
+  grid-column: span 2; /* Email et Message prennent toute la largeur */
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.5); /* Ligne violette */
+  color: white;
+  padding: 10px 0;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-bottom: 2px solid #8B5CF6;
+}
+
+.contact-submit {
+  background-color: #8B5CF6;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 6px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-weight: bold;
 }
