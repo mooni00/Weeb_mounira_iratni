@@ -1,16 +1,17 @@
-    ## 📂 Structure du Projet
+## 📂 Structure du Projet
 
+```text
 weeb/
-├── node_modules/       # Dépendances installées via npm
-├── public/             # Fichiers statiques accessibles publiquement
-└── src/                # Dossier source (code de l'application)
+├── node_modules/       # Dépendances npm
+├── public/             # Fichiers statiques
+└── src/                # Code source
     ├── assets/         # Icônes et images (export Figma)
     │   ├── facebook.svg
     │   ├── instagram.svg
     │   ├── linkedin.svg
     │   ├── twitter.svg
     │   └── youtube.svg
-    ├── Components/     # Blocs d'interface réutilisables
+    ├── Components/     # Blocs réutilisables
     │   ├── ContactForm.jsx
     │   ├── ContentSection.jsx
     │   ├── Footer.jsx
@@ -18,12 +19,13 @@ weeb/
     │   ├── Hero.jsx
     │   ├── LoginForm.jsx
     │   └── Logos.jsx
-    ├── pages/          # Conteneurs de routes (pages complètes)
+    ├── pages/          # Vues complètes (Routes)
     │   ├── about.jsx
     │   ├── contact.jsx
     │   ├── home.jsx
     │   └── login.jsx
-    ├── App.css         # Styles spécifiques aux composants
-    ├── App.jsx         # Gestion des routes (React Router)
-    ├── index.css       # Styles globaux et variables de couleurs
+    ├── App.css         # Styles des composants
+    ├── App.jsx         # Logique des routes
+    ├── index.css       # Styles globaux
     └── main.jsx        # Point d'entrée React
+    \```
