@@ -12,7 +12,6 @@ const Contact = () => {
             Vos suggestions nous aident à faire de ce blog une ressource toujours plus utile et enrichissante.
           </p>
         </section>
-        
         <ContactForm />
       </div>
         <Footer />

@@ -346,10 +346,11 @@ a {
 
 /* contact form styles */
 .contact-container {
-  max-width: 800px; /* Taille exacte de la maquette */
+  max-width: 800px; 
   margin: 80px auto;
   text-align: center;
 }
+
 
 .intro-paragraph {
   color: #9ca3af;
@@ -399,4 +400,12 @@ a {
   margin-top: 30px;
   cursor: pointer;
   font-weight: bold;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: #8B5CF6; /* Violet de ta maquette */
+  outline: none;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease; /* Transition fluide demandée */
 }

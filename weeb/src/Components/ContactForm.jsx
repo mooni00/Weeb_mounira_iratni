@@ -4,6 +4,7 @@ const ContactForm = () => {
     console.log("Formulaire envoyé");
   };
 
+  
   return (
     <form className="contact-form-styled" onSubmit={handleSubmit}>
       <div className="form-grid">
