@@ -14,11 +14,11 @@ const ContactForm = () => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (value === "") {
-      setEmailError(""); // Champ vide, pas d'erreur
+      setEmailError(""); 
     } else if (!regex.test(value)) {
-      setEmailError("Format d'email invalide"); // Format incorrect
+      setEmailError("Format d'email invalide"); 
     } else {
-      setEmailError(""); // Tout est bon
+      setEmailError(""); 
     }
   };
 
