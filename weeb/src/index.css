@@ -366,6 +366,17 @@ a {
   padding: 40px;
 }
 
+.input-error {
+  border: 1px solid #ff4d4d !important;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Deux colonnes */
