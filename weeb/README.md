@@ -28,4 +28,3 @@ weeb/
     ├── App.jsx         # Logique des routes
     ├── index.css       # Styles globaux
     └── main.jsx        # Point d'entrée React
-\```

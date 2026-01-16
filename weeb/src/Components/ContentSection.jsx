@@ -1,4 +1,4 @@
-
+import desktop from '../assets/Desktop2.svg';
 const ContentSection = ({ subtitle, title, description, linkText, imageSrc, reverse }) => {
   return (
     <section className={`content-section ${reverse ? 'reverse' : ''}`}>
@@ -12,7 +12,7 @@ const ContentSection = ({ subtitle, title, description, linkText, imageSrc, reve
       </div>
       <div className="content-image">
         <div className="image-placeholder">
-           <img src={imageSrc} alt={title} />
+           <img src={desktop} alt={title} />
         </div>
       </div>
     </section>

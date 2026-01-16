@@ -1,3 +1,5 @@
+
+import desktop from '../assets/Desktop.svg';
 const Hero = () => {
   return (
     <section className="hero">
@@ -14,6 +16,7 @@ const Hero = () => {
           <button className="btn-primary">Découvrir les articles</button>
           <button className="btn-secondary">S'abonner à la newsletter</button>
         </div>
+        <img src={desktop} alt="Hero Illustration" className="hero-image" />
       </div>
     </section>
   );

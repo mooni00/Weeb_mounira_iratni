@@ -1,25 +1,27 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="main-header">
       <div className="header-wrapper">
-        {/* Partie Gauche*/}
-        <div className="header-left">
-          <div className="logo">
-            <Link to="/">weeb</Link>
-          </div>
-          <nav className="nav-menu">
-            <Link to="/about" className="nav-item">About Us</Link>
-            <Link to="/contact" className="nav-item">Contact</Link>
-          </nav>
+        <div className="logo">
+          <Link to="/">weeb</Link>
         </div>
+      
+        <button className="burger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
+        </button>
 
-        {/* Partie Droite */}
-        <div className="header-right">
-          <Link to="/login" className="login-link">Log In</Link>
-          <button className="join-button">Join Now</button>
-        </div>
+        <nav className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+          <Link to="/login" onClick={() => setIsMenuOpen(false)}>Se connecter</Link>
+          <button className="join-now-btn">Nous rejoindre</button>
+        </nav>
       </div>
     </header>
   );
