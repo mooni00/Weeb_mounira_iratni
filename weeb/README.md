@@ -2,16 +2,18 @@
 
 ```text
 weeb/
-├── node_modules/       # Dépendances npm
-├── public/             # Fichiers statiques
-└── src/                # Code source
-    ├── assets/         # Icônes et images (export Figma)
+├── node_modules/
+├── public/
+└── src/
+    ├── assets/
+    │   ├── Desktop.svg
+    │   ├── Desktop2.svg
     │   ├── facebook.svg
     │   ├── instagram.svg
     │   ├── linkedin.svg
     │   ├── twitter.svg
     │   └── youtube.svg
-    ├── Components/     # Blocs réutilisables
+    ├── Components/
     │   ├── ContactForm.jsx
     │   ├── ContentSection.jsx
     │   ├── Footer.jsx
@@ -19,12 +21,11 @@ weeb/
     │   ├── Hero.jsx
     │   ├── LoginForm.jsx
     │   └── Logos.jsx
-    ├── pages/          # Vues complètes (Routes)
-    │   ├── about.jsx
+    ├── pages/
     │   ├── contact.jsx
     │   ├── home.jsx
     │   └── login.jsx
-    ├── App.css         # Styles des composants
-    ├── App.jsx         # Logique des routes
-    ├── index.css       # Styles globaux
-    └── main.jsx        # Point d'entrée React
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    └── main.jsx
