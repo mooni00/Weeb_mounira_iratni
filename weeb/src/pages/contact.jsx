@@ -6,6 +6,7 @@ const Contact = () => {
     <main className="contact-page">
       <div className="contact-container">
         <section className="contact-intro">
+          <h1 className='titre-contact'>Votre avis compte!</h1>
           <p className="intro-paragraph">
             Votre retour est essentiel pour nous améliorer ! Partagez votre expérience, 
             dites-nous ce que vous aimez et ce que nous pourrions améliorer. 

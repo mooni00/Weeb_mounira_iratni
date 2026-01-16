@@ -33,6 +33,28 @@ a {
 .hero {
   text-align: center;
   padding: 80px 20px;
+  padding-bottom: 0px;
+}
+
+.hero-content p {
+  max-width: 800px; 
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center; 
+}
+mage {
+  width: 1100px;
+  height: 702px;
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    max-width: 200px; 
+    margin-top: 20px; 
+  }
 }
 
 .partners-section {
@@ -98,24 +120,142 @@ a {
   color: #121212;
 }
 
+/* --- Desktop (Standard) --- */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 4%; 
+  background-color: #1a1e29;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px; 
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.join-now-btn {
+  background-color: #8B5CF6;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 50px; 
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.join-now-btn:hover {
+  background-color: #7c3aed;
+}
+
+/* Style des liens texte */
+.nav-left a, .nav-right a {
+  color: #9ca3af; /* Gris clair */
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+  color: white;
+}
+
+
+/* --- Mobile (Responsivité) --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; 
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: #8B5CF6; 
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 20px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  /* Transformation en croix quand ouvert */
+  .bar.active:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .bar.active:nth-child(2) { opacity: 0; }
+  .bar.active:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 70px; 
+    right: 5%;
+    background: #1a1e29; 
+    width: 180px;
+    height: auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+
+
+  .nav-links.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+    text-align: center;
+    
+  }
+  .join-now-btn {
+    width: 100%; 
+    text-align: center;
+    padding: 6px 0;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 .main-header {
   width: 100%;
   display: flex;
   justify-content: center; 
   padding: 20px 0;
-}
-
-.header-wrapper {
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.05); 
-  padding: 12px 30px;
-  border-radius: 100px; 
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-left {
@@ -125,9 +265,12 @@ a {
 }
 
 .logo a {
-  font-weight: 800;
-  font-size: 1.4rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   color: #ffffff;
+}
+.logo a:hover {
+  color: #8B5CF6; 
 }
 
 .nav-menu {
@@ -228,8 +371,7 @@ a {
 
 
 .image-placeholder img {
-  width: 100%;
-  height: 100%;
+
   object-fit: contain; 
 }
 
@@ -345,12 +487,18 @@ a {
 }
 
 /* contact form styles */
+
 .contact-container {
-  max-width: 800px; 
+  max-width: 700px; 
   margin: 80px auto;
   text-align: center;
 }
 
+.titre-contact {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
 .intro-paragraph {
   color: #9ca3af;
@@ -363,17 +511,23 @@ a {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #8B5CF6; /* Bordure violette comme sur l'image */
   border-radius: 12px;
-  padding: 40px;
+  padding: 10px;
+}
+
+.contact-form-styled :hover {
+  background: rgba(139, 92, 246, 0.1);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Deux colonnes */
+  grid-template-columns: 1fr 1fr; 
   gap: 30px;
 }
 
 .full-width {
-  grid-column: span 2; /* Email et Message prennent toute la largeur */
+  grid-column: span 2; 
 }
 
 .form-group input, 
@@ -402,10 +556,89 @@ a {
   font-weight: bold;
 }
 
+.contact-submit:hover {
+  background-color: #7c3aed;
+}
 .contact-form input:focus, 
 .contact-form textarea:focus {
-  border-color: #8B5CF6; /* Violet de ta maquette */
+  border-color: #8B5CF6; 
   outline: none;
   box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
-  transition: all 0.3s ease; /* Transition fluide demandée */
+  transition: all 0.3s ease; 
 }
+
+/* login page styles */
+.login-minimal {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.login-minimal h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Style des champs soulignés */
+.underline-input-group {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #8B5CF6; /* La ligne violette */
+}
+
+.underline-input-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.underline-input-group input::placeholder {
+  color: #a78bfa; /* Violet clair pour le placeholder */
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Bouton plein violet arrondi */
+.btn-purple-full {
+  background-color: #8B5CF6;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin: 20px 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-purple-full:hover {
+  transform: scale(1.02);
+  background-color: #7c3aed;
+}
+
+/* Liens en bas */
+.login-links {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.forgot-pass, .create-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.create-link {
+  border-bottom: 1px solid white; /* Soulignement du "créer un" */
+}
+
+
